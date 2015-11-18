@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="js/jquery/jquery.js"></script>
+        <script src="js/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- for price filter on events.html page -->
+        <script src="js/bootstrap/bootstrap-slider.js"></script>
+        <link href="css/bootstrap-slider.css" rel="stylesheet">
+
+
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        
+
+    </head>
+    <body class="home">
+        
+        <header>
+            <div class="page-top-row">
+                <div class="page-width">
+                    <div class="pull-right">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="top-search-field form-control" placeholder="Search">
+                                <button type="submit" class="btn">Search</button>
+                            </div>
+                        </form>
+                        <a class="register show-register-modal" href="#register" data-toggle="modal" data-target="#content-modal">Register</a>
+                        <a class="login show-login-modal" href="#login" data-toggle="modal" data-target="#content-modal">Login</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Register Modal -->
+            <div id="content-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                     <div class="modal-content">
+                        
+                        <div class="modal-header hide-in-modal show-in-register-modal">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">register your account</h2>
+                            <p>Neque porro quisquam est qui dolorem ipsum <br/>quia dolor sit amet,</p>
+                        </div>
+                        <div class="modal-header hide-in-modal show-in-login-modal">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">login your account</h2>
+                            <p>Neque porro quisquam est qui dolorem ipsum <br/>quia dolor sit amet,</p>
+                        </div>
+                        <div class="modal-header hide-in-modal show-in-password-modal">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">forgot password</h2>
+                            <p>Neque porro quisquam est qui dolorem ipsum <br/>quia dolor sit amet,</p>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <form id="register-content" class="hide-in-modal">
+                                <div class="field email"><input type="email" class="field-email form-control" placeholder="Email Address"></div>
+                                <div class="field user-name"><input type="text" class="field-user-name form-control" placeholder="User Name"></div>
+                                <div class="field password"><input type="password" class="field-password form-control" placeholder="Password"></div>
+                                <div class="field captcha">
+                                    <div class="question">
+                                        What is <span class="qval1">3</span> <span class="operator">*</span> <span class="qval2">4</span> = ?
+                                    </div>
+                                    <input type="text" class="answer form-control" placeholder="Answer">
+                                </div>
+                                <div class="field custom-checkbox">
+                                    <input type="checkbox" value="None" id="custom-checkbox" name="check" unchecked>
+                                    <label for="custom-checkbox"></label>
+                                    <span class="text">I agree to EventCart's Terms of Service , Privacy Policy.</span>
+                                </div>
+                                <div class="login-register">
+                                    <div class="left-col">
+                                        <span class="text">Already have an account?</span>
+                                        <a href="#login" id="load-login" class="login show-login-modal"
+                                           
+                                        >Login</a>
+                                        <!--data-toggle="modal" data-target="#login-modal"-->
+                                    </div>
+                                    <div class="field right-col">
+                                        <button type="submit" class="sub-btn">register</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div id="login-content" class="hide-in-modal">
+                                <div class="social-connect">
+                                    <a href="#connect-with-google" class="google-connect">connect with google</a>
+                                    <a href="#connect-with-google" class="facebook-connect">connect with facebook</a>
+                                </div>
+                                <div class="or_">
+                                    <span class="text">or</span>
+                                </div>
+                                <form>
+                                    <div class="field email"><input type="email" class="field-email form-control" placeholder="Email Address"></div>
+                                    <div class="field password"><input type="password" class="field-password form-control" placeholder="Password"></div>
+                                    <div class="login-register">
+                                        <div class="left-col">
+                                            <a href="#forgot-password" class="forgot-password show-password-modal"
+                                               
+                                            >Forgot Password</a>
+                                            <!-- data-toggle="modal" data-target="#forgot-password-modal" -->
+                                            
+                                            <!--span class="text">Already have an account?</span>
+                                            <a href="#login" class="login">Login</a-->
+                                        </div>
+                                        <div class="field right-col">
+                                            <button type="submit" class="sub-btn">login</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <form id="password-content" class="hide-in-modal">
+                                <div class="field email"><input type="email" class="field-email form-control" placeholder="Email Address"></div>
+                                <div class="login-register">
+                                    <div class="left-col">
+                                        <a href="#login" class="login show-login-modal">Login</a>
+                                    </div>
+                                    <div class="field right-col">
+                                        <button type="submit" class="sub-btn">submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                
+                .modal-dialog .modal-header.hide-in-modal { display: none; }
+                
+                .modal-dialog .modal-body form#register-content.hide-in-modal { display: none; }
+                .modal-dialog .modal-body div#login-content.hide-in-modal { display: none; }
+                .modal-dialog .modal-body form#password-content.hide-in-modal { display: none; }
+                
+                .modal-dialog .modal-body .show-in-modal { display: block !important; }
+                
+                /*modal dialog animation from top on html content change*/
+                /*#content-modal { width: 100% !important; }*/
+                
+            </style>
+            
+            <script>
+                
+                $(document).ready(function(e){
+        	        
+                	//
+                	
+                	//e.preventDefault();
+                	
+        	        $(".show-register-modal").on('click' ,function(){
+        	        	
+        	        	$('#content-modal').hide("fast", function(){
+        	        		
+        	        		$('.modal-body .show-in-modal').removeClass('show-in-modal');
+            	        	$('.modal-body #register-content').addClass('show-in-modal');
+            	        	
+            	        	$('.modal-header').addClass('hide-in-modal');
+            	        	$('.modal-header.show-in-register-modal').removeClass('hide-in-modal');
+        	        		
+        	        		$('#content-modal').modal('handleUpdate').show("normal");
+        	        		
+        	        	});
+        	        	
+        	        });
+        	        //
+        	        //
+        	        $(".show-login-modal").on('click' ,function(){
+        	        	
+        	        	$('#content-modal').hide("fast", function(){
+        	        		
+        	        		$('.modal-body .show-in-modal').removeClass('show-in-modal');
+            	        	$('.modal-body #login-content').addClass('show-in-modal');
+            	        	
+        	        		$('.modal-header').addClass('hide-in-modal');
+            	        	$('.modal-header.show-in-login-modal').removeClass('hide-in-modal');
+            	        	        	        		
+        	        		$('#content-modal').modal('handleUpdate').show("normal");
+        	        		
+        	        	});
+        	        	
+        	        });
+        	        //
+        	        //
+        	        $(".show-password-modal").on('click' ,function(){
+        	        	
+        	        	//$('#content-modal').fadeOut("fast", function(){
+            	        $('#content-modal').hide("fast", function(){
+            	        	
+        	        		$('.modal-body .show-in-modal').removeClass('show-in-modal');
+            	        	$('.modal-body #password-content').addClass('show-in-modal');
+            	        	
+            	        	$('.modal-header').addClass('hide-in-modal');
+            	        	$('.modal-header.show-in-password-modal').removeClass('hide-in-modal');
+        	        		
+        	        		$('#content-modal').modal('handleUpdate').show("normal");
+        	        		
+        	        	});
+        	        	
+        	        	
+        	        });
+        	        
+        	    });
+            </script>
+             
+            <!-- Login Modal -->
+            <!--div id="login-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-- >
+                     <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">login your account</h2>
+                            <p>Neque porro quisquam est qui dolorem ipsum <br/>quia dolor sit amet,</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="social-connect">
+                                <a href="#connect-with-google" class="google-connect">connect with google</a>
+                                <a href="#connect-with-google" class="facebook-connect">connect with facebook</a>
+                            </div>
+                            <div class="or_">
+                                <span class="text">or</span>
+                            </div>
+                            <form>
+                                <div class="field email"><input type="email" class="field-email form-control" placeholder="Email Address"></div>
+                                <div class="field password"><input type="password" class="field-password form-control" placeholder="Password"></div>
+                                <div class="login-register">
+                                    <div class="left-col">
+                                        <a href="#forgot-password" class="forgot-password" data-toggle="modal" data-target="#forgot-password-modal">Forgot Password</a>
+                                        <!--span class="text">Already have an account?</span>
+                                        <a href="#login" class="login">Login</a-- >
+                                    </div>
+                                    <div class="field right-col">
+                                        <button type="submit" class="sub-btn">login</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div-->
+            
+            <!-- Forgot Password Modal -->
+            <!-- div id="forgot-password-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-- >
+                     <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">register your account</h2>
+                            <p>Neque porro quisquam est qui dolorem ipsum <br/>quia dolor sit amet,</p>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="field email"><input type="email" class="field-email form-control" placeholder="Email Address"></div>
+                                <div class="login-register">
+                                    <div class="left-col">
+                                        <a href="#login" class="login">Login</a>
+                                    </div>
+                                    <div class="field right-col">
+                                        <button type="submit" class="sub-btn">submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div-->
+             
+            <nav class="navbar navbar-default navbar-custom">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="logo" href="#home">
+                            <img src="images/logo.png" alt="Page Logo">
+                        </a>
+                    </div>
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-navbar" aria-expanded="false">
+                            <!--span class="sr-only">Toggle Navigation</span-->
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="page-navbar">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#terms-of-service">Terms of Service</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li class="create-event"><a href="#contact-us">Create an Event</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </header>
+
+        <div class="content-wrapper">
+            <div id="home-slider">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="images/slider-1.png" alt="Slide1 Image">
+                            <!-- div class="carousel-caption">
+                                <h3>caption-title</h3>
+                                <p>This is the caption text.</p>
+                            </div-->
+                        </div>
+
+                        <div class="item">
+                            <img src="images/slider-2.jpg" alt="Slide2 Image">
+                            <!--div class="carousel-caption">
+                                <h3>caption-title</h3>
+                                <p>This is the caption text.</p>
+                            </div-->
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <!--a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a-->
+                    <!--a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a-->
+                </div>
+            </div>
+
+            <div class="container page-width">
+                <div class="home-inner-top row">
+                    <div id="home-search" class="col-lg-12">
+                        <form>
+                            <label>Search By: </label>
+                            <input class="form-control keyword" type="text" placeholder="Key Word">
+                            <div class="select-category-bg">
+                                <select class="category form-control">
+                                    <option value="price">Category</option>
+                                    <option value="$375">category2</option>
+                                    <option value="$450">category3</option>
+                                    <option value="$560">category4</option>
+                                </select>
+                            </div>
+                            <button type="button" class="search">Search</button>
+                        </form>
+                    </div>
+
+                    <div id="featured-events">
+                        <div class="title-heading col-lg-12">
+                            <span class="bottom-line"></span>
+                            <h2>Featured Events</h2>
+                        </div>
+
+                        <div class="events col-lg-12">
+                            <div class="event event1">
+                                <a href="#buy-now" class="buy-now">Buy Now</a>
+                                <div class="event-box col-lg-12">
+                                    <img src="images/event1.png">
+                                    <div class="info col-lg-12">
+                                        <div class="bg col-lg-12">
+                                            <div class="left-col col-lg-8">
+                                                <div class="links">
+                                                    <a href="#top-link" class="top-link">Baltic Trip</a>
+                                                    <span class="by-text small">By: </span>
+                                                    <a href="#down-link" class="bottom-link small">Student Trips</a>
+                                                </div>
+                                            </div>
+                                            <div class="right-col col-lg-4">
+                                                <span class="price">&euro;120.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-month col-lg-12">March 12, 2015</div>
+                            </div>
+
+                            <div class="event event2">
+                                <a href="#buy-now" class="buy-now">Buy Now</a>
+                                <div class="event-box col-lg-12">
+                                    <img src="images/event2.png">
+                                    <div class="info col-lg-12">
+                                        <div class="bg col-lg-12">
+                                            <div class="left-col col-lg-8">
+                                                <div class="links">
+                                                    <a href="#top-link" class="top-link">Vaasa Energy Week 2015</a>
+                                                    <span class="by-text small">By: </span>
+                                                    <a href="#down-link" class="bottom-link small">Student Trips</a>
+                                                </div>
+                                            </div>
+                                            <div class="right-col col-lg-4">
+                                                <span class="price">&euro;1120.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-month col-lg-12">March 12, 2015</div>
+                            </div>
+
+                            <div class="event event3">
+                                <a href="#buy-now" class="buy-now">Buy Now</a>
+                                <div class="event-box col-lg-12">
+                                    <img src="images/event3.png">
+                                    <div class="info col-lg-12">
+                                        <div class="bg col-lg-12">
+                                            <div class="left-col col-lg-8">
+                                                <div class="links">
+                                                    <a href="#top-link" class="top-link">Baltic Trip</a>
+                                                    <span class="by-text small">By: </span>
+                                                    <a href="#down-link" class="bottom-link small">Student Trips</a>
+                                                </div>
+                                            </div>
+                                            <div class="right-col col-lg-4">
+                                                <span class="price">&euro;120.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-month col-lg-12">March 12, 2015</div>
+                            </div>
+
+                            <div class="event event4">
+                                <a href="#buy-now" class="buy-now">Buy Now</a>
+                                <div class="event-box col-lg-12">
+                                    <img src="images/event4.png">
+                                    <div class="info col-lg-12">
+                                        <div class="bg col-lg-12">
+                                            <div class="left-col col-lg-8">
+                                                <div class="links">
+                                                    <a href="#top-link" class="top-link">Baltic Trip</a>
+                                                    <span class="by-text small">By: </span>
+                                                    <a href="#down-link" class="bottom-link small">Student Trips</a>
+                                                </div>
+                                            </div>
+                                            <div class="right-col col-lg-4">
+                                                <span class="price">&euro;120.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-month col-lg-12">March 12, 2015</div>
+                            </div>
+
+                            <div class="event event5">
+                                <a href="#buy-now" class="buy-now">Buy Now</a>
+                                <div class="event-box col-lg-12">
+                                    <img src="images/event5.png">
+                                    <div class="info col-lg-12">
+                                        <div class="bg col-lg-12">
+                                            <div class="left-col col-lg-8">
+                                                <div class="links">
+                                                    <a href="#top-link" class="top-link">Baltic Trip</a>
+                                                    <span class="by-text small">By: </span>
+                                                    <a href="#down-link" class="bottom-link small">Student Trips</a>
+                                                </div>
+                                            </div>
+                                            <div class="right-col col-lg-4">
+                                                <span class="price">&euro;120.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-month col-lg-12">March 12, 2015</div>
+                            </div>
+
+                            <div class="event event6">
+                                <a href="#buy-now" class="buy-now">Buy Now</a>
+                                <div class="event-box col-lg-12">
+                                    <img src="images/event6.png">
+                                    <div class="info col-lg-12">
+                                        <div class="bg col-lg-12">
+                                            <div class="left-col col-lg-8">
+                                                <div class="links">
+                                                    <a href="#top-link" class="top-link">Baltic Trip</a>
+                                                    <span class="by-text small">By: </span>
+                                                    <a href="#down-link" class="bottom-link small">Student Trips</a>
+                                                </div>
+                                            </div>
+                                            <div class="right-col col-lg-4">
+                                                <span class="price">&euro;120.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-month col-lg-12">March 12, 2015</div>
+                            </div>
+                        </div>
+                        <div class="view-all-events">
+                            <a href="#view-all-events">view all events</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="home-inner-bottom">
+                    <div id="featured-categories" class="col-lg-12">
+                        <div class="title-heading col-lg-12">
+                            <h2>Featured Categories</h2>
+                        </div>
+
+                        <div class="categories col-lg-12">
+                            <a href="#events?cat=Category1?name=Music-Party" class="category category1 col-lg-3 ">
+                                <div class="top-image">
+                                    <img src="images/category1.png">
+                                </div>
+                                <h3 class="bottom-heading">Music Party</h3>
+                                <h2 class="bottom-text">Movie with Groove 1</h2>
+                            </a>
+                            
+                            <a href="#events?cat=Category2?name=Academic-Vocational" class="category category2 col-lg-3 ">
+                                <div class="top-image">
+                                    <img src="images/category2.png">
+                                </div>
+                                <h3 class="bottom-heading">Academic Vocational</h3>
+                                <h2 class="bottom-text">Learn new skill</h2>
+                            </a>
+                            <a href="#events?cat=Category2?name=Business-Seminars" class="category category3 col-lg-3 ">
+                                <div class="top-image">
+                                    <img src="images/category3.png">
+                                </div>
+                                <h3 class="bottom-heading">Business Seminars</h3>
+                                <h2 class="bottom-text">Enhance your professional career</h2>
+                            </a>
+                            <a href="#events?cat=Category2?name=Trips-Tours" class="category category4 col-lg-3 ">
+                                <div class="top-image">
+                                    <img src="images/category4.png">
+                                </div>
+                                <h3 class="bottom-heading">Trips Tours</h3>
+                                <h2 class="bottom-text">Explore new lands</h2>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="stats">
+                        <div class="stats-inner">
+                            <div class="stat stat1">
+                                <span class="stat-img"></span>
+                                <span class="stat-info">70,101</span>
+                                <span class="stat-text">Happy Customers</span>
+                            </div>
+                            <div class="stat stat2">
+                                <span class="stat-img"></span>
+                                <span class="stat-info">70,101</span>
+                                <span class="stat-text">Happy Customers</span>
+                            </div>
+                            <div class="stat stat3">
+                                <span class="stat-img"></span>
+                                <span class="stat-info">70,101</span>
+                                <span class="stat-text">Happy Customers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer class="container">
+            <div class="page-width">
+
+                <div class="footer-nav row">
+                    <div class="top-nav col-lg-12">
+
+                        <ul class="col-lg-12">
+
+                            <li class="col-lg-3"><a href="#event-cart">EVENT CART</a>
+                                <ul>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="#terms-of-service">Terms of Service</a></li>
+                                    <li><a href="#contact-us">Contact Us</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#plan-events">PLAN EVENTS</a>
+                                <ul>
+                                    <li><a href="#music-party">Music/Party</a></li>
+                                    <li><a href="#Academic-Vocational">Acadenic/Vocational</a></li>
+                                    <li><a href="#tips-tours">Tips &amp; Tours</a></li>
+                                    <li><a href="#bussiness-seminars">Bussiness &amp; Seminars</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#quick-links">QUICK LINKS</a>
+                                <ul>
+                                    <li><a href="#my-profile">My Profile</a></li>
+                                    <li><a href="#my-tickets">My Tickets</a></li>
+                                    <li><a href="#login-register">Login/Register</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#join-us">JOIN US</a>
+                                <ul class="social">
+                                    <li class="facebook"><a href="#facebook"></a></li>
+                                    <li class="twitter"><a href="#twitter"></a></li>
+                                    <li class="google-plus"><a href="#google-plus"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="payment-links col-lg-12">
+                        <div class="middle_">
+                            <ul class="">
+                                <li><a href="#visa" class="visa"><img src="images/payment-provider/visa.png" alt="Visa Payment" /></a></li>
+                                <li><a href="#paypal" class="paypal"><img src="images/payment-provider/paypal.png" alt="Paypal Payments" /></a></li>
+                                <li><a href="#master-card" class="master-card"><img src="images/payment-provider/master-card.png" alt="Master Card" /></a></li>
+                                <li><a href="#american-express"><img src="images/payment-provider/american-express.png" alt="American Express" /></a></li>
+                                <li><a href="#discover"><img src="images/payment-provider/discover.png" alt="Discover Payment" /></a></li>
+                                <li><a href="#payment-6"><img src="images/payment-provider/payment-6.png" alt="Payment Gateway-6" /></a></li>
+                                <li><a href="#payment-7"><img src="images/payment-provider/payment-7.png" alt="Payment Gateway-7" /></a></li>
+                                <li><a href="#payment-8"><img src="images/payment-provider/payment-8.png" alt="Payment Gateway-8" /></a></li>
+                                <li><a href="#payment-9"><img src="images/payment-provider/payment-9.png" alt="Payment Gateway-9" /></a></li>
+                                <li><a href="#aktia"><img src="images/payment-provider/aktia.png" alt="Aktia Payments" /></a></li>
+                                <li><a href="#neo"><img src="images/payment-provider/neo.png" alt="NEO Payments" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bottom-links col-lg-12">
+                        <div class="middle_">
+                            <ul class="">
+                                <li class="event-cart">
+                                    <a href="#event-cart" class="pull-right;">
+                                        <img src="images/footer-event-cart.png" alt="Event Cart" />
+                                    </a>
+                                    <span class="text_">Copyright &COPY; 2014 EventCart. All rights reserved. Designed &amp; Developed by Elandz Ltd.</span>
+                                </li>
+                                <li class="digi-cert"><a href="#digi-cert"><img src="images/footer-digi-cert.png" alt="Digital Certificate" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    
+</html>
