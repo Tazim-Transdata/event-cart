@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="js/jquery/jquery.js"></script>
+        <script src="js/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <script src="js/bootstrap/bootstrap-slider.js"></script>
+        <link href="css/bootstrap-slider.css" rel="stylesheet">
+
+
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body class="checkout">
+        <div class="header-image" id="header-image-events">
+            <img src="images/header-checkout-page-bg.png" />
+        </div>
+        
+        <header>
+
+            <div class="page-top-row">
+                <div class="page-width">
+                    <div class="pull-right">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="top-search-field form-control" placeholder="Search">
+                                <button type="submit" class="btn">Search</button>
+                            </div>
+                        </form>
+                        <a class="register" href="#register">Register</a>
+                        <a class="login" href="#login">Login</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-default navbar-custom">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="logo" href="#home">
+                            <img src="images/logo.png" alt="Page Logo">
+                        </a>
+                    </div>
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-navbar" aria-expanded="false">
+                            <!--span class="sr-only">Toggle Navigation</span-->
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="page-navbar">
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#terms-of-service">Terms of Service</a></li>
+                            <li class="active"><a href="events.html">Events</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li class="create-event"><a href="#contact-us">Create an Event</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </header>
+
+        <div class="content-wrapper">
+            <div class="container page-width">
+                <div class="col-lg-12 top-heading">
+                    <h1>checkout</h1>
+                </div>
+                <div id="checkout" class="col-lg-12">
+                    <!-- Page Left Content -->
+                    <div class="col-lg-9 col-md-9 col-sm-9 left-content">
+                        <div class="row reservation-time">
+                            <div class="timer">
+                                <span class="cur-time">08:46</span>
+                            </div>
+                            <div class="text_">
+                                <p class="">Please complete registration within 10:00 minutes.</p>
+                                <p class="text_">After 10:00 minutes, the reservation we’re holding will be released to others.</p>
+                            </div>
+                        </div>
+                        <div class="row ticket-detail">
+                            <div class="heading-row">
+                                <h3 class="title">ticket detail</h3>
+                            </div>
+                            <div class="ticket-detail-table">
+                                
+                                <div class="row heading">
+                                    <div class="col_ col-1_ ticket-name">ticket name</div>
+                                    <div class="col_ col-2_ price-inc-vat">price (Inc. VAT)</div>
+                                    <div class="col_ col-3_ vat">vat</div>
+                                    <div class="col_ col-4_ quantity">quantity</div>
+                                    <div class="col_ col-5_ total-inc-vat">total (Inc. VAT)</div>
+                                    <div class="col_ col-6_ total">trash</div>
+                                </div>
+                                
+                                <div class="row values">
+                                    <div class="col_ col-1_ ticket-name">student ticket</div>
+                                    <div class="col_ col-2_ price-inc-vat">&euro;100.00</div>
+                                    <div class="col_ col-3_ vat">24%</div>
+                                    <div class="col_ col-4_ quantity">1</div>
+                                    <div class="col_ col-5_ total-inc-vat">&euro;100.00</div>
+                                    <div class="col_ col-6_ total"><a class="trash" href="#trash-record">trash-record</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row ticket-delivery-type">
+                            <div class="heading-row">
+                                <h3 class="title">ticket delivery type</h3>
+                            </div>
+                            <div class="radio-buttons">
+                                <form>
+                                    <div class="custom-radio-button sms">
+                                        <input type="radio" id="delivery-sms" name="delivery-type" unchecked>
+                                        <label for="delivery-sms"></label>
+                                       <span class="custom-label">sms (&euro; 1.00)</span>
+                                    </div>
+                                    
+                                    <div class="custom-radio-button email">
+                                        <input type="radio" id="delivery-email" name="delivery-type" checked>
+                                        <label for="delivery-email"></label>
+                                        <span class="custom-label">sms (&euro; 0.00)</span>
+                                    </div>
+                                    
+                                    <div class="custom-radio-button mail">
+                                        <input type="radio" id="delivery-mail" name="delivery-type" unchecked>
+                                        <label for="delivery-mail"></label>
+                                        <span class="custom-label">mail (&euro; 5.00)</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row payment-method">
+                            <div class="heading-row">
+                                <h3 class="title">payment method</h3>
+                            </div>
+                            <div class="payment-method-table">
+                                
+                                <div class="row heading">
+                                    <div class="col_ col-1_ select-payment">select payment method</div>
+                                    <div class="col_ col-2_ price">price</div>
+                                </div>
+                                <form>
+                                    <div class="row values">
+                                        <div class="col_ col-1_ custom-radio-button">
+                                            <input type="radio" id="payment-method-1" name="payment-method" checked>
+                                            <label for="payment-method-1"></label>
+                                        </div>
+                                        <div class="col_ col-2_ payment-links">
+                                            <a class="icon-payment paypal" href="#paypal">paypal</a>
+                                            <a class="icon-payment visa" href="#visa">visa</a>
+                                            <a class="icon-payment master-card" href="#master-card">master card</a>
+                                            <a class="icon-payment american-express" href="#american-express">american express</a>
+                                        </div>
+                                        <div class="col_ col-3_ price">&euro; 4.96</div>
+                                    </div>
+                                    
+                                    <div class="row values">
+                                        <div class="col_ col-1_ custom-radio-button">
+                                            <input type="radio" id="payment-method-2" name="payment-method" unchecked>
+                                            <label for="payment-method-2"></label>
+                                        </div>
+                                        <div class="col_ col-2_ payment-links">
+                                            <a class="icon-payment bank-transfer" href="#bank-transfer">bank-transfer</a>
+                                        </div>
+                                        <div class="col_ col-3_ price">&euro; 1.00</div>
+                                    </div>
+                                    
+                                    <div class="row values">
+                                        <div class="col_ col-1_ custom-radio-button">
+                                            <input type="radio" id="payment-method-3" name="payment-method" unchecked>
+                                            <label for="payment-method-3"></label>
+                                        </div>
+                                        <div class="col_ col-2_ payment-links">
+                                            <a class="icon-payment pay-method6" href="#pay-method6">pay-method6</a>
+                                        </div>
+                                        <div class="col_ col-3_ price">&euro; 1.00</div>
+                                    </div>
+                                    
+                                    <div class="row values">
+                                        <div class="col_ col-1_ custom-radio-button">
+                                            <input type="radio" id="payment-method-4" name="payment-method" unchecked>
+                                            <label for="payment-method-4"></label>
+                                        </div>
+                                        <div class="col_ col-2_ payment-links">
+                                            <a class="icon-payment finish-net" href="#finish-net">pay-method6</a>
+                                        </div>
+                                        <div class="col_ col-3_ price">&euro; 1.00</div>
+                                    </div>
+                                </form>
+                                <div class="row bottom-pay-links">
+                                    <div class="col_ col-1_ payment-links">
+                                        <a class="icon-payment payment-method-01" href="#payment-method-01">payment-method-01</a>
+                                        <a class="icon-payment payment-method-02" href="#payment-method-02">payment-method-02</a>
+                                        <a class="icon-payment payment-method-03" href="#payment-method-03">payment-method-03</a>
+                                        <a class="icon-payment payment-method-04" href="#payment-method-04">payment-method-04</a>
+                                        <a class="icon-payment payment-method-05" href="#payment-method-05">payment-method-05</a>
+                                        <a class="icon-payment payment-method-06" href="#payment-method-06">payment-method-06</a>
+                                        <a class="icon-payment payment-method-07" href="#payment-method-07">payment-method-07</a>
+                                        <a class="icon-payment payment-method-08" href="#payment-method-08">payment-method-08</a>
+                                        <a class="icon-payment payment-method-09" href="#payment-method-09">payment-method-09</a>
+                                        <a class="icon-payment payment-method-10" href="#payment-method-10">payment-method-10</a>
+                                        <a class="icon-payment payment-method-11" href="#payment-method-11">payment-method-11</a>
+                                        <a class="icon-payment payment-method-12" href="#payment-method-12">payment-method-12</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pay-now">
+                            <a class="pay-link" href="#pay-now">pay now</a>
+                        </div>
+                        
+                    </div>
+                    <!-- Page Right Sidebar -->
+                    <div class="col-lg-3 col-md-3 col-sm-4 right-sidebar">
+                        <div class="row">
+                            <div class="col-lg-12 checkout-summary">
+                                <h4>checkout summary</h4>
+                                <div class="checkout-summary-table">
+                                    
+                                    <div class="row ticket-price">
+                                        <div class="col_ col-1_ label">ticket price</div>
+                                        <div class="col_ col-2_ value">&euro; 157.26</div>
+                                    </div>
+                                    
+                                    <div class="row vat">
+                                        <div class="col_ col-1_ label">VAT</div>
+                                        <div class="col_ col-2_ value">&euro; 37.74</div>
+                                    </div>
+                                    
+                                    <div class="row prossec-fee">
+                                        <div class="col_ col-1_ label">prosecc fee</div>
+                                        <div class="col_ col-2_ value">&euro; 3.90</div>
+                                    </div>
+                                    
+                                    <div class="row subtotal">
+                                        <div class="col_ col-1_ label">subtotal</div>
+                                        <div class="col_ col-2_ value">&euro; 198.90</div>
+                                    </div>
+                                    
+                                    <div class="row payment-fee">
+                                        <div class="col_ col-1_ label">payment fee</div>
+                                        <div class="col_ col-2_ value">&euro; 8.44</div>
+                                    </div>
+                                    <div class="row box-shadow"></div>
+                                    <div class="row total-incl-vat">
+                                        <div class="col_ col-1_ label">total incl vat</div>
+                                        <div class="col_ col-2_ value">&euro; 207.34</div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer class="container">
+            <div class="page-width">
+
+                <div class="footer-nav row">
+                    <div class="top-nav col-lg-12">
+
+                        <ul class="col-lg-12">
+
+                            <li class="col-lg-3"><a href="#event-cart">EVENT CART</a>
+                                <ul>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="#terms-of-service">Terms of Service</a></li>
+                                    <li><a href="#contact-us">Contact Us</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#plan-events">PLAN EVENTS</a>
+                                <ul>
+                                    <li><a href="#music-party">Music/Party</a></li>
+                                    <li><a href="#Academic-Vocational">Acadenic/Vocational</a></li>
+                                    <li><a href="#tips-tours">Tips &amp; Tours</a></li>
+                                    <li><a href="#bussiness-seminars">Bussiness &amp; Seminars</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#quick-links">QUICK LINKS</a>
+                                <ul>
+                                    <li><a href="#my-profile">My Profile</a></li>
+                                    <li><a href="#my-tickets">My Tickets</a></li>
+                                    <li><a href="#login-register">Login/Register</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#join-us">JOIN US</a>
+                                <ul class="social">
+                                    <li class="facebook"><a href="#facebook"></a></li>
+                                    <li class="twitter"><a href="#twitter"></a></li>
+                                    <li class="google-plus"><a href="#google-plus"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="payment-links col-lg-12">
+                        <div class="middle_">
+                            <ul class="">
+                                <li><a href="#visa" class="visa"><img src="images/payment-provider/visa.png" alt="Visa Payment" /></a></li>
+                                <li><a href="#paypal" class="paypal"><img src="images/payment-provider/paypal.png" alt="Paypal Payments" /></a></li>
+                                <li><a href="#master-card" class="master-card"><img src="images/payment-provider/master-card.png" alt="Master Card" /></a></li>
+                                <li><a href="#american-express"><img src="images/payment-provider/american-express.png" alt="American Express" /></a></li>
+                                <li><a href="#discover"><img src="images/payment-provider/discover.png" alt="Discover Payment" /></a></li>
+                                <li><a href="#payment-6"><img src="images/payment-provider/payment-6.png" alt="Payment Gateway-6" /></a></li>
+                                <li><a href="#payment-7"><img src="images/payment-provider/payment-7.png" alt="Payment Gateway-7" /></a></li>
+                                <li><a href="#payment-8"><img src="images/payment-provider/payment-8.png" alt="Payment Gateway-8" /></a></li>
+                                <li><a href="#payment-9"><img src="images/payment-provider/payment-9.png" alt="Payment Gateway-9" /></a></li>
+                                <li><a href="#aktia"><img src="images/payment-provider/aktia.png" alt="Aktia Payments" /></a></li>
+                                <li><a href="#neo"><img src="images/payment-provider/neo.png" alt="NEO Payments" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bottom-links col-lg-12">
+                        <div class="middle_">
+                            <ul class="">
+                                <li class="event-cart">
+                                    <a href="#event-cart" class="pull-right;">
+                                        <img src="images/footer-event-cart.png" alt="Event Cart" />
+                                    </a>
+                                    <span class="text_">Copyright &COPY; 2014 EventCart. All rights reserved. Designed &amp; Developed by Elandz Ltd.</span>
+                                </li>
+                                <li class="digi-cert"><a href="#digi-cert"><img src="images/footer-digi-cert.png" alt="Digital Certificate" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

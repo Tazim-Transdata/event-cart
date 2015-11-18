@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="js/jquery/jquery.js"></script>
+        <script src="js/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <script src="js/bootstrap/bootstrap-slider.js"></script>
+        <link href="css/bootstrap-slider.css" rel="stylesheet">
+
+
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body class="events">
+        <!--div class="header-image" id="header-image-events">
+            <img src="images/header-events-page-bg.png" />
+        </div-->
+        
+        <header>
+
+            <div class="page-top-row">
+                <div class="page-width">
+                    <div class="pull-right">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="top-search-field form-control" placeholder="Search">
+                                <button type="submit" class="btn">Search</button>
+                            </div>
+                        </form>
+                        <a class="register" href="#register">Register</a>
+                        <a class="login" href="#login">Login</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-default navbar-custom">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="logo" href="#home">
+                            <img src="images/logo.png" alt="Page Logo">
+                        </a>
+                    </div>
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-navbar" aria-expanded="false">
+                            <!--span class="sr-only">Toggle Navigation</span-->
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="page-navbar">
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#terms-of-service">Terms of Service</a></li>
+                            <li class="active"><a href="events.html">Events</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li class="create-event"><a href="#contact-us">Create an Event</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </header>
+
+        <div class="content-wrapper events">
+            <div class="container page-width">
+                <div class="col-lg-12 top-heading">
+                    <h1>Events</h1>
+                </div>
+                <div id="events" class="col-lg-12">
+                    <!-- Page Left Content -->
+                    <div class="col-lg-9 col-md-9 col-sm-9 left-content">
+                        <div class="row sort-by">
+                            <div class="col-lg-12 sort-col">
+                                <form class="sort-form">
+                                    <label class="col-lg-3">Sort By</label>
+                                    <div class="form-group">
+                                        <div class="select-sort-bg">
+                                            <select class="sort form-control">
+                                                <option value="price">Price</option>
+                                                <option value="$375">$375</option>
+                                                <option value="$450">$450</option>
+                                                <option value="$560">$560</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-date-bg">
+                                            <select class="date form-control">
+                                                <option value="date">Date</option>
+                                                <option value="10/08/2015">10-aug-2015</option>
+                                                <option value="20/09/2015">20-sep-2015</option>
+                                                <option value="30/10/2015">30-oct-2015</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-lg-4 item-photo">
+                                <img src="images/item-photo.png">
+                            </div>
+                            <div class="col-lg-8 item-content">
+                                <div class="top-row">
+                                    <h3 class="title"><a href="#lapland-trip-dec-2015">Lapland trip Dec 2015</a></h3>
+                                    <span class="price pull-right">&euro;195.00</span>
+                                </div>
+                                <div class="content-row">
+                                    <div class="author-details">
+                                        <label>By :</label>
+                                        <span class="author-name">AStudent Trips</span>
+                                        <span class="date">Thursday, 10 DEC 2015</span>
+                                    </div>
+                                    <div class="avail pull-right">
+                                        <label>Availability :</label>
+                                        <span class="avail-value">0</span>
+                                    </div>
+                                </div>
+                                <p class="text-row col-lg-12">Join us on an adventurous trip to Lapland Finland 200 km North from the Arctic Circle. Lapland offers many lovely memories for everyone. Experience winter twilight, Northern Lights and BRRRRRR! cold temperatures.</p>
+                                <button type="button" class="btn book-btn pull-right">Book Now</button>
+                            </div>
+                        </div>
+
+                        <div class="row items">
+                            <div class="col-lg-4 item-photo">
+                                <img src="images/item-photo.png">
+                            </div>
+                            <div class="col-lg-8 item-content">
+                                <div class="top-row">
+                                    <h3 class="title"><a href="#lapland-trip-dec-2015">Lapland trip Dec 2015</a></h3>
+                                    <span class="price pull-right">&euro;195.00</span>
+                                </div>
+                                <div class="content-row">
+                                    <div class="author-details">
+                                        <label>By :</label>
+                                        <span class="author-name">AStudent Trips</span>
+                                        <span class="date">Thursday, 10 DEC 2015 </span>
+                                    </div>
+                                    <div class="avail pull-right">
+                                        <label>Availability :</label>
+                                        <span class="avail-value">0</span>
+                                    </div>
+                                </div>
+                                <p class="text-row col-lg-12">Join us on an adventurous trip to Lapland Finland 200 km North from the Arctic Circle. Lapland offers many lovely memories for everyone. Experience winter twilight, Northern Lights and BRRRRRR! cold temperatures.</p>
+                                <button type="button" class="btn book-btn pull-right">Book Now</button>
+                            </div>
+                        </div>
+
+                        <div class="row items">
+                            <div class="col-lg-4 item-photo">
+                                <img src="images/item-photo.png">
+                            </div>
+                            <div class="col-lg-8 item-content">
+                                <div class="top-row">
+                                    <h3 class="title"><a href="#lapland-trip-dec-2015">Lapland trip Dec 2015</a></h3>
+                                    <span class="price pull-right">&euro;195.00</span>
+                                </div>
+                                <div class="content-row">
+                                    <div class="author-details">
+                                        <label>By :</label>
+                                        <span class="author-name">AStudent Trips</span>
+                                    </div>
+                                    <div class="avail pull-right">
+                                        <label>Availability :</label>
+                                        <span class="avail-value">0</span>
+                                    </div>
+                                </div>
+                                <p class="text-row col-lg-12">Join us on an adventurous trip to Lapland Finland 200 km North from the Arctic Circle. Lapland offers many lovely memories for everyone. Experience winter twilight, Northern Lights and BRRRRRR! cold temperatures.</p>
+                                <button type="button" class="btn book-btn pull-right">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Right Sidebar -->
+                    <div class="col-lg-3 col-md-3 col-sm-4 right-sidebar">
+                        <div class="row">
+                            <div class="col-lg-12 filter">
+                                <h4 class="col-lg-12">Filter By: </h4>
+                                <form class="filter col-lg-12">
+                                    <div class="select-category-bg">
+                                        <select class="category form-control">
+                                            <option value="date">Select Category</option>
+                                            <option value="cat1">Category1</option>
+                                            <option value="cat2">Category2</option>
+                                            <option value="cate3">Category3</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" class="event-location form-control" placeholder="Specify the location of the event">
+                                    <div class="select-date-bg">
+                                        <select class="date form-control">
+                                            <option value="date">Date</option>
+                                            <option value="10/08/2015">10-aug-2015</option>
+                                            <option value="20/09/2015">20-sep-2015</option>
+                                            <option value="30/10/2015">30-oct-2015</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" class="keyword form-control" placeholder="Keyword">
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 price">
+                                <h4 class="col-lg-12">Price: </h4>
+
+                                <form class="price col-lg-12">
+                                    <div class="price-slider col-lg-12">
+                                        <div class="info">
+                                            <span class="dollar">&dollar;</span>
+                                            <span class="budget">Budget: </span>
+                                            &euro; <span class="start-value" id="price-start-value">0</span>
+                                            &HorizontalLine; &euro; <span class="end-value" id="price-end-value">1000</span>
+                                        </div>
+                                        <div class="price-range">
+                                            <input id="price-filter"
+                                                   type="text"
+                                                   class="span2"
+                                                   value=""
+                                                   data-slider-min="0"
+                                                   data-slider-max="1000"
+                                                   data-slider-step="5"
+                                                   data-slider-value="[240,490]"
+                                                   data-slider-tooltip="hide"
+                                                   />
+                                        </div>
+                                    </div>
+                                    <div class="remove-filter col-lg-12">
+                                        <div class="button-style">
+                                            <button id="remove-price-filter" type="submit" value="Remove Filter">Remove Filter</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <script type="text/javascript">
+                                    //
+                                    $(document).ready(function () {
+
+                                        var $price_filter = $("#price-filter").slider({
+                                            tooltip: 'hide'
+
+                                        });
+                                        //
+                                        //
+                                        $price_filter.on("slide", function (slideEvt) {
+                                            //
+                                            //console.log(slideEvt.value[0]);
+                                            $('#price-start-value').html(slideEvt.value[0]);
+                                            $('#price-end-value').html(slideEvt.value[1]);
+                                            //
+                                        });
+                                        //
+                                        $("#remove-price-filter").click(function (option) {
+                                            console.log('filter destroyed');
+                                            $price_filter.slider('destroy');
+                                            $('#price-start-value').html('0');
+                                            $('#price-end-value').html('1000');
+                                        });
+                                        //$("#price-filter").slider('destroy');
+                                    });
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer class="container">
+            <div class="page-width">
+
+                <div class="footer-nav row">
+                    <div class="top-nav col-lg-12">
+
+                        <ul class="col-lg-12">
+
+                            <li class="col-lg-3"><a href="#event-cart">EVENT CART</a>
+                                <ul>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="#terms-of-service">Terms of Service</a></li>
+                                    <li><a href="#contact-us">Contact Us</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#plan-events">PLAN EVENTS</a>
+                                <ul>
+                                    <li><a href="#music-party">Music/Party</a></li>
+                                    <li><a href="#Academic-Vocational">Acadenic/Vocational</a></li>
+                                    <li><a href="#tips-tours">Tips &amp; Tours</a></li>
+                                    <li><a href="#bussiness-seminars">Bussiness &amp; Seminars</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#quick-links">QUICK LINKS</a>
+                                <ul>
+                                    <li><a href="#my-profile">My Profile</a></li>
+                                    <li><a href="#my-tickets">My Tickets</a></li>
+                                    <li><a href="#login-register">Login/Register</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="col-lg-3"><a href="#join-us">JOIN US</a>
+                                <ul class="social">
+                                    <li class="facebook"><a href="#facebook"></a></li>
+                                    <li class="twitter"><a href="#twitter"></a></li>
+                                    <li class="google-plus"><a href="#google-plus"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="payment-links col-lg-12">
+                        <div class="middle_">
+                            <ul class="">
+                                <li><a href="#visa" class="visa"><img src="images/payment-provider/visa.png" alt="Visa Payment" /></a></li>
+                                <li><a href="#paypal" class="paypal"><img src="images/payment-provider/paypal.png" alt="Paypal Payments" /></a></li>
+                                <li><a href="#master-card" class="master-card"><img src="images/payment-provider/master-card.png" alt="Master Card" /></a></li>
+                                <li><a href="#american-express"><img src="images/payment-provider/american-express.png" alt="American Express" /></a></li>
+                                <li><a href="#discover"><img src="images/payment-provider/discover.png" alt="Discover Payment" /></a></li>
+                                <li><a href="#payment-6"><img src="images/payment-provider/payment-6.png" alt="Payment Gateway-6" /></a></li>
+                                <li><a href="#payment-7"><img src="images/payment-provider/payment-7.png" alt="Payment Gateway-7" /></a></li>
+                                <li><a href="#payment-8"><img src="images/payment-provider/payment-8.png" alt="Payment Gateway-8" /></a></li>
+                                <li><a href="#payment-9"><img src="images/payment-provider/payment-9.png" alt="Payment Gateway-9" /></a></li>
+                                <li><a href="#aktia"><img src="images/payment-provider/aktia.png" alt="Aktia Payments" /></a></li>
+                                <li><a href="#neo"><img src="images/payment-provider/neo.png" alt="NEO Payments" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bottom-links col-lg-12">
+                        <div class="middle_">
+                            <ul class="">
+                                <li class="event-cart">
+                                    <a href="#event-cart" class="pull-right;">
+                                        <img src="images/footer-event-cart.png" alt="Event Cart" />
+                                    </a>
+                                    <span class="text_">Copyright &COPY; 2014 EventCart. All rights reserved. Designed &amp; Developed by Elandz Ltd.</span>
+                                </li>
+                                <li class="digi-cert"><a href="#digi-cert"><img src="images/footer-digi-cert.png" alt="Digital Certificate" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
